@@ -21,34 +21,49 @@ def test_heading() -> None:
     assert formater("Heading level 2\n---------------") == "*Heading level 2*\n"
 
 
-def test_strong() -> None:
+def test_paragraphs() -> None:
+    """Test paragraphs."""
+
+    assert (
+        formater("First paragraph.\n\nSecond paragraph.")
+        == "First paragraph.\n\nSecond paragraph.\n"
+    )
+
+
+def test_line_breaks() -> None:
+    """Test line breaks."""
+
+    assert formater("First line.\nSecond line.") == "First line.\nSecond line.\n"
+
+
+def test_bold() -> None:
     """Test bold."""
 
     assert formater("**bold**") == "*bold*\n"
     assert formater("__bold__") == "*bold*\n"
 
 
-def test_emphasis() -> None:
+def test_italic() -> None:
     """Test italic."""
 
     assert formater("*italic*") == "_italic_\n"
     assert formater("_italic_") == "_italic_\n"
 
 
-def test_link() -> None:
-    """Test link."""
-
-    assert formater("[example](http://www.example.com/)") == "[example](http://www.example.com/)\n"
-
-
-def test_codespan() -> None:
+def test_code() -> None:
     """Test code."""
 
     assert formater("`code`") == "`code`\n"
 
 
-def test_block_code() -> None:
-    """Test code block."""
+def test_code_blocks() -> None:
+    """Test code blocks."""
 
     assert formater("```\ncode block\n```") == "```\ncode block\n```\n"
     assert formater("```python\ncode block\n```") == "```python\ncode block\n```\n"
+
+
+def test_links() -> None:
+    """Test links."""
+
+    assert formater("[example](http://www.example.com/)") == "[example](http://www.example.com/)\n"
