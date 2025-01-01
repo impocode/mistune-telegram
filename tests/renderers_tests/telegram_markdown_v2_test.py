@@ -1,8 +1,9 @@
 import mistune
+from mistune.plugins.formatting import strikethrough
 
-from mistune_telegram import TelegramMarkdownRenderer
+from mistune_telegram import TelegramMarkdownV2Renderer
 
-formater = mistune.create_markdown(renderer=TelegramMarkdownRenderer())
+formater = mistune.create_markdown(renderer=TelegramMarkdownV2Renderer(), plugins=[strikethrough])
 
 
 def test_heading() -> None:
@@ -39,3 +40,22 @@ def test_link() -> None:
     """Test link."""
 
     assert formater("[example](http://www.example.com/)") == "[example](http://www.example.com/)\n"
+
+
+def test_codespan() -> None:
+    """Test code."""
+
+    assert formater("`code`") == "`code`\n"
+
+
+def test_block_code() -> None:
+    """Test code block."""
+
+    assert formater("```\ncode block\n```") == "```\ncode block\n```\n"
+    assert formater("```python\ncode block\n```") == "```python\ncode block\n```\n"
+
+
+def test_strikethrough() -> None:
+    """Test strikethrough."""
+
+    assert formater("~~strikethrough~~") == "~strikethrough~\n"
