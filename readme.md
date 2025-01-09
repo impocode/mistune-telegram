@@ -12,7 +12,7 @@ Plugin mistune for converting Markdown into Telegram format.
 |        Bold        | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |       Italic       | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |     Blockquotes    |         :x:        |         :x:          |        :x:         |
-|       Lists        |         :x:        |         :x:          |        :x:         |
+|       Lists        |         :x:        |         :x:          | :white_check_mark: |
 |        Code        | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |     Code blocks    | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |  Horizontal rules  |         :x:        |         :x:          |        :x:         |
@@ -260,6 +260,15 @@ __bold__
 *italic*
 _italic_
 
+1. First item
+2. Second item
+
+- First item
+- Second item
+
+* First item
+* Second item
+
 `code`
 
 ```
@@ -308,6 +317,15 @@ Second line.
 
 <em>italic</em>
 <em>italic</em>
+
+- First item
+- Second item
+
+- First item
+- Second item
+
+- First item
+- Second item
 
 <code>code</code>
 
