@@ -51,6 +51,14 @@ def test_italic() -> None:
     assert formater("_italic_") == "<em>italic</em>\n\n"
 
 
+def test_lists() -> None:
+    """Test lists."""
+
+    assert formater("1. First item\n2. Second item") == "- First item\n- Second item\n\n"
+    assert formater("- First item\n- Second item") == "- First item\n- Second item\n\n"
+    assert formater("* First item\n* Second item") == "- First item\n- Second item\n\n"
+
+
 def test_code() -> None:
     """Test code."""
 

@@ -33,6 +33,14 @@ class TelegramHTMLRenderer(HTMLRenderer):
         else:
             return html + ">" + escape(code) + "</pre>\n"
 
+    def list(self, text: str, ordered: bool, **attrs: Any) -> str:
+        """Convert Markdown list to Telegram HTML format."""
+        return text + "\n"
+
+    def list_item(self, text: str) -> str:
+        """Convert Markdown list item to Telegram HTML format."""
+        return "- " + text + "\n"
+
     def strikethrough(self, text: str) -> str:
         """Convert Markdown strikethrough to Telegram HTML format."""
         return "<del>" + text + "</del>"
