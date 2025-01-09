@@ -51,6 +51,9 @@ select = [
     "C4",     # flake8-comprehensions
     "ANN",    # flake8-annotations
 ]
+ignore = [
+    "ANN401", # any-type
+]
 
 [build-system]
 requires = ["poetry-core"]

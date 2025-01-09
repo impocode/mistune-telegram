@@ -1,5 +1,5 @@
 test:
-	poetry run pytest . -x
+	poetry run pytest . -vv -x
 
 style:
 	poetry run ruff format
