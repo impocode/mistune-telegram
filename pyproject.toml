@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mistune-telegram"
-version = "0.2.0"
+version = "0.3.0"
 description = "Plugin mistune for converting markdown into Telegram format."
 
 authors = ["impocode <impocode@impocode.one>"]
