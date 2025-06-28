@@ -45,5 +45,9 @@ class TelegramHTMLRenderer(HTMLRenderer):
         """Convert Markdown strikethrough to Telegram HTML format."""
         return "<del>" + text + "</del>"
 
+    def thematic_break(self) -> str:
+        """Convert Markdown thematic break to Telegram HTML format."""
+        return "\n"
+
 
 __all__ = ["TelegramHTMLRenderer"]
