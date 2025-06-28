@@ -87,9 +87,12 @@ def test_links() -> None:
 def test_strikethrough() -> None:
     """Test strikethrough."""
 
-    assert formater("~~strikethrough~~") == "<del>strikethrough</del>\n\n"
+    assert formater("~~strikethrough~~") == "<s>strikethrough</s>\n\n"
+
 
 def test_thematic_break() -> None:
     """Test thematic break."""
 
+    assert formater("***") == "\n"
     assert formater("---") == "\n"
+    assert formater("___") == "\n"

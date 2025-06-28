@@ -67,3 +67,11 @@ def test_links() -> None:
     """Test links."""
 
     assert formater("[example](http://www.example.com/)") == "[example](http://www.example.com/)\n"
+
+
+def test_thematic_break() -> None:
+    """Test thematic break."""
+
+    assert formater("***") == "\n"
+    assert formater("---") == "\n"
+    assert formater("___") == "\n"

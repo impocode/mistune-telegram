@@ -74,3 +74,11 @@ def test_strikethrough() -> None:
     """Test strikethrough."""
 
     assert formater("~~strikethrough~~") == "~strikethrough~\n"
+
+
+def test_thematic_break() -> None:
+    """Test thematic break."""
+
+    assert formater("***") == "\n"
+    assert formater("---") == "\n"
+    assert formater("___") == "\n"

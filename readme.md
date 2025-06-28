@@ -15,7 +15,7 @@ Plugin mistune for converting Markdown into Telegram format.
 |       Lists        |         :x:        |         :x:          | :white_check_mark: |
 |        Code        | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |     Code blocks    | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
-|  Horizontal rules  |         :x:        |         :x:          |        :x:         |
+|  Horizontal rules  | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |        Links       | :white_check_mark: |  :white_check_mark:  | :white_check_mark: |
 |       Images       |         :x:        |         :x:          |        :x:         |
 
@@ -335,6 +335,6 @@ Second line.
 </code></pre>
 <a href="http://www.example.com/">link</a>
 
-<del>strikethrough</del>
+<s>strikethrough</s>
 
 ````

@@ -21,5 +21,9 @@ class TelegramMarkdownRenderer(MarkdownRenderer):
         """Convert Markdown italic to Telegram Markdown format."""
         return "_" + self.render_children(token, state) + "_"
 
+    def thematic_break(self, token: Dict[str, Any], state: BlockState) -> str:
+        """Convert Markdown thematic break to Telegram Markdown format."""
+        return "\n"
+
 
 __all__ = ["TelegramMarkdownRenderer"]
